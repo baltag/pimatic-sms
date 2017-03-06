@@ -11,7 +11,7 @@ module.exports = {
       description: "Which SMS Provider to use"
       type: "string"
       default: "twilio"
-      enum: ["twilio","threehk"]
+      enum: ["twilio","threehk","mobilant"]
     twilioAccountSid:
       description: "Account Sid for Twilio"
       type: "string"
@@ -20,6 +20,10 @@ module.exports = {
       description: "Account Auth Token for Twilio"
       type: "string"
       default: ""
+    mobilantAuthToken:
+        description: "Account Auth Token for Mobilant"
+        type: "string"
+        default: ""
     threehkPassword:
       description: "Login Password for ThreeHK 3Care"
       type: "string"

@@ -49,6 +49,14 @@ module.exports = (env) ->
             mobileNumber: mobileLoginNumber,
             password: @config.threehkPassword,
             })
+      else if @config.provider is "mobilant" and @providers.hasOwnProperty 'mobilant'
+        if (@config.mobilantAuthToken is "")
+          return env.logging.error "We need AuthToken when using provider 'mobilant'"
+        else
+          @provider = @providers['mobilant'](Promise, {
+            authToken: @config.mobilantAuthToken,
+            fromNumber: @config.fromNumber
+            })
       else
         throw new Error("Invalid Provider Specified!")
 

@@ -12,6 +12,7 @@
     "providers/SMSProvider.coffee",
     "providers/ThreeHK.coffee",
     "providers/Twilio.coffee",
+    "providers/Mobilant.coffee",
     "providers/index.coffee"
   ],
   "scripts": {
